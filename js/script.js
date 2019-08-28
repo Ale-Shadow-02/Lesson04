@@ -31,21 +31,21 @@ console.log('Цель будет достигнута за: ', getTargetMonth() 
 
 
 let showTypeOf = function (data) {
-  return (data, typeof (data));
+  return (typeof (data));
 };
 
-console.log(showTypeOf(money));
-console.log(showTypeOf(addExpenses));
-console.log(showTypeOf(deposit));
+console.log('Money: ', showTypeOf(money));
+console.log('addExpenses: ', showTypeOf(addExpenses));
+console.log('deposit: ', showTypeOf(deposit));
 
 let getStatusIncome = function () {
   if (getAccumulatedMonth() >= 800) {
     return ('Высокий уровень дохода');
-  } else if (getAccumulatedMonth() >= 300 && getAccumulatedMonth() < 800) {
+  } else if (getAccumulatedMonth() >= 300) {
     return ('Средний уровень дохода');
-  } else if (getAccumulatedMonth() >= 0 && getAccumulatedMonth() < 300) {
+  } else if (getAccumulatedMonth() >= 0 ) {
     return ('Низкий уровень дохода');
-  } else if (getAccumulatedMonth() < 0) {
+  } else  {
     return ('Что то пошло не так');
   }
 }; 
